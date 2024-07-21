@@ -36,6 +36,30 @@ class MainActivity : AppCompatActivity() {
         binding.accountDeleteAccount.setOnClickListener {
             nextActivity(DeleteAccount::class.java)
         }
+
+        binding.inventoryCreate.setOnClickListener {
+            nextActivity(InventoryCreate::class.java)
+        }
+
+        binding.inventoryDisplayAll.setOnClickListener {
+            nextActivity(InventoryDisplayAll::class.java)
+        }
+
+        binding.inventoryDelete.setOnClickListener {
+            nextActivity(InventoryDelete::class.java)
+        }
+
+        binding.subscriptionCreate.setOnClickListener {
+            nextActivity(SubscriptionCreate::class.java)
+        }
+
+        binding.subscriptionDisplayAll.setOnClickListener {
+            nextActivity(SubscriptionDisplayAll::class.java)
+        }
+
+        binding.subscriptionDelete.setOnClickListener {
+            nextActivity(SubscriptionDelete::class.java)
+        }
     }
 
     private fun nextActivity(target: Class<out AppCompatActivity>) {

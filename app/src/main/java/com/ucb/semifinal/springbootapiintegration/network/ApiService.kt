@@ -4,6 +4,7 @@ import com.ucb.semifinal.springbootapiintegration.models.ApiResponse
 import com.ucb.semifinal.springbootapiintegration.models.Inventory
 import com.ucb.semifinal.springbootapiintegration.models.LoginRequest
 import com.ucb.semifinal.springbootapiintegration.models.SignUpRequest
+import com.ucb.semifinal.springbootapiintegration.models.Subscription
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -21,7 +22,7 @@ interface ApiService {
     @DELETE("/deleteUserByEmail/{email}")
     fun deleteUserByEmail(@Path("email") email: String): Call<String>
 
-    @POST("/loginAccount")
+    @POST("/createInventory")
     fun createInventory(@Body post: Inventory): Call<Inventory>
 
     @GET("/displayAllInventory")
@@ -29,5 +30,14 @@ interface ApiService {
 
     @DELETE("/deleteInventoryByEmail/{email}")
     fun deleteInventoryByEmail(@Path("email") email: String): Call<String>
+
+    @POST("/createSubscription")
+    fun createSubscription(@Body post: Subscription): Call<Subscription>
+
+    @GET("/displayAllSubscriptions")
+    fun getAllSubscription(): Call<List<Subscription>>
+
+    @DELETE("/deleteSubscriptionByEmail/{email}")
+    fun deleteSubscriptionByEmail(@Path("email") email: String): Call<String>
 
 }

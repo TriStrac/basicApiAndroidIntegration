@@ -15,6 +15,21 @@
         android:theme="@style/Theme.SpringBootApiIntegration"
         tools:targetApi="31">
         <activity
+            android:name=".SubscriptionDelete"
+            android:exported="false" />
+        <activity
+            android:name=".SubscriptionDisplayAll"
+            android:exported="false" />
+        <activity
+            android:name=".SubscriptionCreate"
+            android:exported="false" />
+        <activity
+            android:name=".InventoryDelete"
+            android:exported="false" />
+        <activity
+            android:name=".InventoryDisplayAll"
+            android:exported="false" />
+        <activity
             android:name=".InventoryCreate"
             android:exported="false" />
         <activity
